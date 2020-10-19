@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import {Header, MoviesList, MoviesDetails, MoviesElements} from './components';
+import {Header, MoviesList, MoviesDetails, MoviesElements, Footer} from './components';
 
 class App extends Component{
   render(){
     return(
-      <div>
+      <div className="container App d-flex flex-column">
         <Header />
-        <div className = "d-flex flex-row">
+        <div className = "content d-flex flex-row border flex-fill pt-3">
           <MoviesList />
           <MoviesDetails />
         </div>
-        
-        <MoviesElements />
+        <Footer />
+       
       </div>      
     );
   }
