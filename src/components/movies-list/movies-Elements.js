@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
-
+import '../../index.css';
 
 export default class MoviesElements extends Component{
+    /**
+     * creation de la fonction mouseEnter pour l'evenement onMouseEnter
+     * on recupere updateSelectedMovie depuis moviesElement haaaa l'hydratation de props heyyy 
+     */
+mouseEnter = () =>{
+    this.props.updateSelectedMovie(this.props._movie.title);
+}
     render(){
         return (
-            <div className="w-25 p-2">
-            <div className="card">
-                <img src="" alt="img-gladiator" className="card-img-top" />
-                <div className="card-body">
-                    <h5 className="card-title">Gladiator</h5>
-                    <p className="card-text">SYNOPSIS ET DÉTAILS
-Le général romain Maximus est le plus fidèle soutien de l'empereur Marc Aurèle, qu'il a conduit de victoire en victoire avec une bravoure et un dévouement exemplaires. Jaloux du prestige de Maximus, et plus encore de l'amour que lui voue l'empereur, le fils de MarcAurèle, Commode, s'arroge brutalement le pouvoir, puis ordonne l'arrestation du général et son exécution. Maximus échappe à ses assassins mais ne peut empêcher le massacre de sa famille. Capturé par un marchand d'esclaves, il devient gladiateur et prépare sa vengeance.
-Distributeur United International Pictures (UIP)
-                    </p>
+            <div onMouseEnter={this.mouseEnter} className="w-50 p-2">
+            <div className="border d-flex">
+               <img width="150" height="200" alt="film-series" src={this.props._movie.img}/>
+                <div className="flex-fill d-flex flex-column p-3">
+                    <h5>{this.props._movie.title}</h5>
+                    <hr className="w-100" />
+                    <span>{this.props._movie.details}</span>
                 </div>
             </div>
             </div>

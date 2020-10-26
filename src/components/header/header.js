@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import '../../index.css';
 
 export default class Header extends Component{
     render(){
         return(
             <header className="navbar navbar-expand-xl navbar-light bg-light">
-               <a className="navbar-brand" href="/">Movies Library</a>
+               <a className=" navbar-brand" href="/">Movies Library</a>
                <button className="navbar-toggler">
                    <span className="navbar-toggler-icon"></span>
                </button>

@@ -6,3 +6,6 @@ export default class Footer extends Component{
         return <div className="footer bg-dark">Footer</div>
     }
 }
+/**
+ * color footer 0a1128
+ */

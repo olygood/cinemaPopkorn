@@ -41,5 +41,9 @@
 }
 .footer{
   background: black;
-  color: white;
+  color: #001f54;
+  
+}
+h5{
+  color: red;
 }
